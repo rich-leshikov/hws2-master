@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/rich-leshikov/static/css/main.1a51f856.css",
+    "main.js": "/rich-leshikov/static/js/main.f9f2e88a.js",
+    "static/js/787.66cb4309.chunk.js": "/rich-leshikov/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/rich-leshikov/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/rich-leshikov/index.html",
+    "main.1a51f856.css.map": "/rich-leshikov/static/css/main.1a51f856.css.map",
+    "main.f9f2e88a.js.map": "/rich-leshikov/static/js/main.f9f2e88a.js.map",
+    "787.66cb4309.chunk.js.map": "/rich-leshikov/static/js/787.66cb4309.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a51f856.css",
+    "static/js/main.f9f2e88a.js"
+  ]
+}
