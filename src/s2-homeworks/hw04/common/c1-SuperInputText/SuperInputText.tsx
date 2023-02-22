@@ -21,8 +21,7 @@ type SuperInputTextPropsType = Omit<DefaultInputPropsType, 'type'> & {
   spanClassName?: string
 }
 
-const SuperInputText: React.FC<SuperInputTextPropsType> = (
-  {
+const SuperInputText: React.FC<SuperInputTextPropsType> = ({
     onChange,
     onChangeText,
     onKeyPress,
@@ -31,10 +30,8 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     className,
     spanClassName,
     id,
-
     ...restProps // все остальные пропсы попадут в объект restProps
-  }
-) => {
+  }) => {
   const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
     onChange?.(e) // если есть пропс onChange, то передать ему е (поскольку onChange не обязателен)
 
@@ -67,9 +64,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
       <span
         id={id ? id + '-span' : undefined}
         className={finalSpanClassName}
-      >
-                {error}
-            </span>
+      >{error}</span>
     </div>
   )
 }
