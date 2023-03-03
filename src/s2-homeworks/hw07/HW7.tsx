@@ -9,7 +9,7 @@ export type OptionType = {
   value: string | number
 }
 
-const arr: Array<any> = [
+const arr: Array<OptionType> = [
   {id: 1, value: 'Pre-junior'},
   {id: 2, value: 'Junior'},
   {id: 3, value: 'Junior+'},
