@@ -26,7 +26,9 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
         return 0;
       }
 
-      return action.payload === 'up' ? [...state.sort(sortUp)] : [...state.sort(sortDown)]
+      const stateCopy = [...state]
+
+      return action.payload === 'up' ? stateCopy.sort(sortUp) : stateCopy.sort(sortDown)
     }
     case 'check': {
       return state.filter(u => u.age >= 18)
