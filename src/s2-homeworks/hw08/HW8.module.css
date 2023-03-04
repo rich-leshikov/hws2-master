@@ -4,20 +4,37 @@
 .item:last-of-type {
 }
 
+.users div {
+  box-sizing: border-box;
+}
+
 .users {
+  margin: 20px 0;
+  width: 100%;
 }
 
 .buttonsContainer {
+  margin-left: 235px;
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .container {
+  width: 50%;
 }
 
 .thead {
+  height: 40px;
+  background-color: #E5E5E5;
+  font-weight: 700;
 }
 
 .nameCol {
+  width: 40%;
+  padding: 10px;
 }
 
 .ageCol {
+  padding: 10px;
 }
