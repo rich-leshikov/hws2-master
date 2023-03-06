@@ -1,4 +1,8 @@
 .buttonsContainer {
+  margin: 30px 0;
+  width: 22%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .clock {
@@ -11,4 +15,8 @@
 }
 
 .more {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9c9c9c;
 }
