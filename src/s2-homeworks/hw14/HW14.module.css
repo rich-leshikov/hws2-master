@@ -1,7 +1,8 @@
 .tech {
-
+  margin: 5px 0;
 }
 
 .loading {
-
+  text-align: right;
+  color: #4D4D4D;
 }
