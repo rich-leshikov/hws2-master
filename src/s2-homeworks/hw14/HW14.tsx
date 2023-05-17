@@ -27,8 +27,8 @@ const HW14 = () => {
     setLoading(true)
     getTechs(value)
       .then((res) => {
-        res && setTechs(res.data.techs)
         setLoading(false)
+        res && setTechs(res.data.techs)
       })
   }
 
