@@ -1,11 +1,16 @@
 .pagination {
-    display: flex;
+  max-width: 550px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.text1 {
-
+.select {
+  min-width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.text2 {
-
+.superSelect {
+  width: 40px;
 }
