@@ -34,6 +34,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
 
   const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
     onChangeOption && onChangeOption(+e.currentTarget.value) // What is this meaning?
+    onChange && onChange(e)
   }
 
   const finalSelectClassName = s.select + (className ? ' ' + className : '')
