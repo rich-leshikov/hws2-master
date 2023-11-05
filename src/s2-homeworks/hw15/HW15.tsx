@@ -30,7 +30,7 @@ type ParamsType = {
 const getTechs = (params: ParamsType) => {
   return axios
     .get<{ techs: TechType[], totalCount: number }>(
-      'https://samurai.it-incubator.io/api/3.0/homework/test2',
+      'https://samurai.it-incubator.io/api/3.0/homework/test3',
       {params}
     )
     .catch((e) => {
@@ -51,36 +51,36 @@ const HW15 = () => {
     setLoading(true)
     getTechs(params)
       .then((res) => {
-        // делает студент
-
-        // сохранить пришедшие данные
-
-        //
+        if (res) {
+          setTechs(res.data.techs)
+          setTotalCount(res.data.totalCount)
+        }
+      })
+      .finally(() => {
+        setLoading(false)
       })
   }
 
   const onChangePagination = (newPage: number, newCount: number) => {
-    // делает студент
+    setPage(newPage)
+    setCount(newCount)
+    const pageQuery: { page?: string } = newPage !== 1 ? {page: newPage.toString()} : {}
+    const countQuery: { count?: string } = newCount !== 4 ? {count: newCount.toString()} : {}
+    const {count, page, ...lastQueries} = Object.fromEntries(searchParams)
+    const allQuery = {...lastQueries, ...pageQuery, ...countQuery}
 
-    // setPage(
-    // setCount(
-
-    // sendQuery(
-    // setSearchParams(
-
-    //
+    sendQuery(allQuery)
+    setSearchParams(allQuery)
   }
 
   const onChangeSort = (newSort: string) => {
-    // делает студент
-
-    // setSort(
-    // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-    // sendQuery(
-    // setSearchParams(
-
-    //
+    setSort(newSort)
+    setPage(1)
+    const sortQuery: { sort?: string } = newSort !== '' ? {sort: newSort} : {}
+    const {sort, page, ...lastQueries} = Object.fromEntries(searchParams)
+    const allQuery = {...lastQueries, ...sortQuery}
+    sendQuery(allQuery)
+    setSearchParams(allQuery)
   }
 
   useEffect(() => {
@@ -107,7 +107,19 @@ const HW15 = () => {
       <div className={s2.hwTitle}>Homework #15</div>
 
       <div className={s2.hw}>
-        {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+        {
+          idLoading &&
+          <div className={s.ldsRoller}>
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+          </div>
+        }
 
         <SuperPagination
           page={page}
